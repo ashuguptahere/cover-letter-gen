@@ -1,10 +1,7 @@
 import ollama
 import gradio as gr
 from fpdf import FPDF
-from fastapi import FastAPI
 from datetime import datetime
-
-app = FastAPI()
 
 
 def generate_cover_letter(
@@ -166,5 +163,7 @@ def create_gradio_interface():
     return app
 
 
-gradio_app = create_gradio_interface()
-app = gr.mount_gradio_app(app, gradio_app, path="/")
+demo = create_gradio_interface()
+
+# Launch the app
+demo.launch()

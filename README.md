@@ -37,7 +37,7 @@ uv sync
 
 ### Run `gradio app`:
 ```
-uv run uvicorn app:app --reload
+gradio app.py
 ```
 
 ## 🤝 Contributing
